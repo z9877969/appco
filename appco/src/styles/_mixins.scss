@@ -1,0 +1,30 @@
+@mixin bg-position($_posX, $_posY) {
+  background-repeat: no-repeat;
+  background-position: $_posX $_posY;
+}
+
+@mixin box-size($_W, $_H, $_M, $_P) {
+  width: $_W;
+  height: $_H;
+  margin: $_M;
+  padding: $_P;
+}
+
+@mixin flex($_just-cont, $_align-item) {
+  display: flex;
+  justify-content: $_just-cont;
+  align-items: $_align-item;
+}
+
+@mixin hover($_property, $_toValue) {
+  #{$_property}: $_toValue;
+  transition: #{$_property} 0.3s linear;
+  cursor: pointer;
+}
+
+@mixin font-set($_font-size, $_font-weight, $_line-height) {
+  font-weight: $_font-weight;
+  font-size: $_font-size;
+  line-height: $_line-height;
+  font-style: normal;
+}
